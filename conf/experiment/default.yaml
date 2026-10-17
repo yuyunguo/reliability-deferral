@@ -1,0 +1,27 @@
+task: sepsis           # primary task; sepsis | mortality
+replication_task: mortality
+
+# Temporal split (MIMIC-IV admission years)
+split:
+  train_end: 2015
+  val_end: 2017
+  test_end: 2019
+
+# Reliability dimensions
+reliability:
+  lookback_hours: 24
+  baseline_hours: 6
+  mc_dropout_passes: 50
+  dropout_rate: 0.1
+  n_tertile_bins: 3        # for R-conditioned recalibration
+
+# Evaluation
+eval:
+  n_bootstrap: 1000
+  ece_n_bins: 10           # adaptive equal-mass bins
+  min_meaningful_delta_ece: 0.01
+  alpha: 0.05
+
+# Deep ensembles
+ensemble:
+  n_models: 5

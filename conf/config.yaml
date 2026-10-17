@@ -1,0 +1,12 @@
+defaults:
+  - model: xgboost
+  - experiment: default
+  - _self_
+
+paths:
+  data_dir: data/mimic4
+  artifacts_dir: artifacts
+  results_dir: results
+
+seed: 42
+seeds: [0, 1, 2, 3, 4]

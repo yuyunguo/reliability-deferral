@@ -1,0 +1,20 @@
+# @package _global_
+defaults:
+  - /model: xgboost
+  - /experiment: default
+  - _self_
+
+paths:
+  data_dir: data/mimic4
+  artifacts_dir: artifacts
+  results_dir: deferral_frontier/results
+
+seed: 42
+seeds: [0, 1, 2, 3, 4]
+
+deferral:
+  # Coverage targets to evaluate (proportion predicted, not deferred)
+  coverage_targets: [0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 0.95, 1.00]
+
+  # Policies to evaluate
+  policies: ["confidence", "reliability", "D2_sufficiency", "D3_similarity", "D4_stability", "D5_uncertainty"]
