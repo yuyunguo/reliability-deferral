@@ -45,7 +45,7 @@ def main() -> None:
                     color=SETTING_COLORS[s], s=70, label=DISPLAY.get(s, s), zorder=3)
     ax1.axvline(99.0, color="0.3", ls=":", lw=1)
     ax1.text(99.05, 0.3, "ceiling", rotation=90, va="bottom", fontsize=8, color="0.3")
-    ax1.set_xlabel("Submitted D2: fraction of patients at ceiling (%)")
+    ax1.set_xlabel("Preprint D2 ratio: patients at ceiling (%)")
     ax1.set_ylabel("D2*: coefficient of variation")
     ax1.set_title("(a) D2 saturates; D2* discriminates")
     ax1.set_xlim(97.5, 100.2)

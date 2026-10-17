@@ -213,7 +213,7 @@ def s4() -> str:
     t2 = table("S4b", "llccccccccc", hdr2, rows2, "Largest minus smallest deferral rate across groups (percentage points), "
                "all database--task pairs. OS: one-sided; Sym: symmetric; Comp: composite.", "\\footnotesize")
     return ("\\section*{Table S4: Subgroup Audit}\n\nAge bands: 18--39, 40--54, 55--64, 65--74, and $\\geq$75 "
-            "years. Results for every database are in the code release.\n\n" + t1 + "\n\n" + t2 + "\n")
+            "years. Table S4b summarizes all 12 database--task pairs.\n\n" + t1 + "\n\n" + t2 + "\n")
 
 
 # ---------------------------------------------------------------- S6
